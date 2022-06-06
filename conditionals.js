@@ -12,9 +12,10 @@ if (yourName === null || yourName === "" ) {
 let rideshare = prompt('Are you ridesharing? (Yes/No)');
 if (rideshare.toUpperCase() === "YES") {
     let rideshare$ = prompt('Okay, but how much is the ride one way?');
-    if (parseInt(rideshare$) < 30) {
+    let cost = Number(rideshare$.replace(/[^\d.]/g, ''));
+    if (parseInt(cost) < 30) {
         let eaten = prompt("Not bad! Have you eaten yet though? (Yes/No)");
-        if (eaten.toUpperCase === "YES"){
+        if (eaten.toUpperCase() === "YES"){
             alert(`Great! Cause you're not you when you're hungry..`);
             // ENDING SOCIAL BATTERY CHECK IN BRANCH
             let social = prompt("Let's do a social battery check-in: On a scale from 1-10, how social are you feeling?"); 
@@ -57,13 +58,13 @@ if (rideshare.toUpperCase() === "YES") {
         }
 
     } else {
-        alert(`DAAAAAYYUMNN. It's not worth it babes. Party @ home ${yourName}.`)
+        alert(`DAAAAAYYUMNN. It's not worth it babes. Party @ home ${yourName}.`);
     }
 } else {
     let driving = prompt('Are you driving? (Yes/No)');
     if (driving.toUpperCase() === "YES"){
         let eaten = prompt("Ok chill~ but have you eaten yet? (Yes/No)");
-        if (eaten.toUpperCase === "YES"){
+        if (eaten.toUpperCase() === "YES"){
             alert(`Great! Cause you're not you when you're hungry..`);
             let social = prompt("Let's do a social battery check-in: On a scale from 1-10, how social are you feeling?"); 
             if (parseInt(social) >= 5 ){
@@ -108,7 +109,7 @@ if (rideshare.toUpperCase() === "YES") {
 
     } else {
         let eaten = prompt("Ok chill~ but have you eaten yet? (Yes/No)");
-        if (eaten.toUpperCase === "YES"){
+        if (eaten.toUpperCase() === "YES"){
             alert(`Oh good... cause no shade ${yourName}, you're not you when you're hungry..`);
             let social = prompt("Let's do a social battery check-in: On a scale from 1-10, how social are you feeling?");
             if (parseInt(social) >= 5 ){
